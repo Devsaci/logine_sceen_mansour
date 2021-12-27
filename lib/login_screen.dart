@@ -12,14 +12,15 @@ class LoginScreen extends StatelessWidget {
         title: const Text('LOGINE SSCREEN'),
         centerTitle: true,
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children:  const [
             Text(
               'Login',
               style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
             ),
+
           ],
         ),
       ),
