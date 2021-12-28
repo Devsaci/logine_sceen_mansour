@@ -13,13 +13,15 @@ class LoginScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(30.0),
         child: Column(
-          children:  const [
+          children:   [
             Text(
               'Login',
               style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
             ),
+            TextFormField(),
+
 
           ],
         ),
