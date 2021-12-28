@@ -6,7 +6,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  LoginScreen({Key? key}) : super(key: key);
+  var passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +49,7 @@ class LoginScreen extends StatelessWidget {
               height: 30,
             ),
             TextFormField(
+              controller: passwordController,
               keyboardType: TextInputType.visiblePassword,
               obscureText: true,
               onFieldSubmitted: (String value) {
@@ -73,8 +75,10 @@ class LoginScreen extends StatelessWidget {
               width: double.infinity,
               color: Colors.red,
               child: MaterialButton(
-                child: Text('Login',style: TextStyle(color: Colors.white),),
-                onPressed: () {},
+                child: Text('Login', style: TextStyle(color: Colors.white),),
+                onPressed: () {
+
+                },
               ),
             )
           ],
