@@ -30,6 +30,9 @@ class LoginScreen extends StatelessWidget {
               onFieldSubmitted: (String value) {
                 print(value);
               },
+              onChanged: (value){
+                print(value);
+              },
               decoration: const InputDecoration(
                 // hintText: 'LOGIN',
                 labelText: 'Email Adress ',
