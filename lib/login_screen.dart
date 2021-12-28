@@ -17,19 +17,23 @@ class LoginScreen extends StatelessWidget {
         padding: const EdgeInsets.all(30.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children:   [
+          children: [
             const Text(
               'Login',
               style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
             ),
+            const SizedBox(height: 30,),
             TextFormField(
               decoration: const InputDecoration(
-                  hintText: 'LOGIN',
+                // hintText: 'LOGIN',
                 labelText: 'LOGIN',
+                border: OutlineInputBorder(
+                  borderRadius :BorderRadius.all(Radius.circular(4.0)),
+                ),
+                prefixIcon: Icon(Icons.email),
+
               ),
             ),
-
-
           ],
         ),
       ),
