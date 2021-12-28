@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
               onFieldSubmitted: (String value) {
                 print(value);
               },
-              onChanged: (value){
+              onChanged: (value) {
                 print(value);
               },
               decoration: const InputDecoration(
@@ -40,6 +40,27 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(4.0)),
                 ),
                 prefixIcon: Icon(Icons.email),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            TextFormField(
+              keyboardType: TextInputType.visiblePassword,
+              onFieldSubmitted: (String value) {
+                print(value);
+              },
+              onChanged: (value) {
+                print(value);
+              },
+              decoration: const InputDecoration(
+                // hintText: 'LOGIN',
+                labelText: 'PassWord ',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                ),
+                prefixIcon: Icon(Icons.lock),
+                suffixIcon: Icon(Icons.remove_red_eye),
               ),
             ),
           ],
