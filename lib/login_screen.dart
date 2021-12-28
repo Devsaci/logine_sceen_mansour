@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
               height: 30,
             ),
             TextFormField(
-              keyboardType: TextInputType.emailAddress ,
+              keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
                 // hintText: 'LOGIN',
                 labelText: 'Email Adress ',
@@ -34,7 +34,6 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(4.0)),
                 ),
                 prefixIcon: Icon(Icons.email),
-
               ),
             ),
           ],
