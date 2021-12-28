@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -10,19 +12,19 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('LOGIN SCREEN'),
+        title: Text('LOGIN SCREEN'),
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(30.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Login',
-              style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(
+            SizedBox(
               height: 30,
             ),
             TextFormField(
@@ -33,7 +35,7 @@ class LoginScreen extends StatelessWidget {
               onChanged: (value) {
                 print(value);
               },
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 // hintText: 'LOGIN',
                 labelText: 'Email Adress ',
                 border: OutlineInputBorder(
@@ -42,7 +44,7 @@ class LoginScreen extends StatelessWidget {
                 prefixIcon: Icon(Icons.email),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 30,
             ),
             TextFormField(
