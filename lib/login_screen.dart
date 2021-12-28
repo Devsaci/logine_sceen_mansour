@@ -10,7 +10,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('LOGINE SSCREEN'),
+        title: const Text('LOGIN SCREEN'),
         centerTitle: true,
       ),
       body: Padding(
@@ -27,6 +27,9 @@ class LoginScreen extends StatelessWidget {
             ),
             TextFormField(
               keyboardType: TextInputType.emailAddress,
+              onFieldSubmitted: (String value) {
+                print(value);
+              },
               decoration: const InputDecoration(
                 // hintText: 'LOGIN',
                 labelText: 'Email Adress ',
