@@ -47,6 +47,7 @@ class LoginScreen extends StatelessWidget {
             ),
             TextFormField(
               keyboardType: TextInputType.visiblePassword,
+              obscureText: true,
               onFieldSubmitted: (String value) {
                 print(value);
               },
