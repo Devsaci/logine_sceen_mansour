@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
   var passwordController = TextEditingController();
+  var emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,7 @@ class LoginScreen extends StatelessWidget {
               height: 30,
             ),
             TextFormField(
+              controller: emailController,
               keyboardType: TextInputType.emailAddress,
               onFieldSubmitted: (String value) {
                 print(value);
