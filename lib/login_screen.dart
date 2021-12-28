@@ -22,13 +22,16 @@ class LoginScreen extends StatelessWidget {
               'Login',
               style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 30,),
+            const SizedBox(
+              height: 30,
+            ),
             TextFormField(
+              keyboardType: TextInputType.emailAddress ,
               decoration: const InputDecoration(
                 // hintText: 'LOGIN',
-                labelText: 'LOGIN',
+                labelText: 'Email Adress ',
                 border: OutlineInputBorder(
-                  borderRadius :BorderRadius.all(Radius.circular(4.0)),
+                  borderRadius: BorderRadius.all(Radius.circular(4.0)),
                 ),
                 prefixIcon: Icon(Icons.email),
 
