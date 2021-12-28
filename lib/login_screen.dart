@@ -69,9 +69,12 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            MaterialButton(
-              color: Colors.redAccent,
-              onPressed: () {},
+            Container(
+              color: Colors.red,
+              child: MaterialButton(
+                child: Text('Login'),
+                onPressed: () {},
+              ),
             )
           ],
         ),
