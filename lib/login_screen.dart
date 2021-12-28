@@ -66,6 +66,13 @@ class LoginScreen extends StatelessWidget {
                 suffixIcon: Icon(Icons.remove_red_eye),
               ),
             ),
+            SizedBox(
+              height: 30,
+            ),
+            MaterialButton(
+              color: Colors.redAccent,
+              onPressed: () {},
+            )
           ],
         ),
       ),
