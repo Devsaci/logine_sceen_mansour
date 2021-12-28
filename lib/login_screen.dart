@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -15,12 +16,17 @@ class LoginScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children:   [
-            Text(
+            const Text(
               'Login',
               style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
             ),
-            TextFormField(),
+            TextFormField(
+              decoration: const InputDecoration(
+
+              ),
+            ),
 
 
           ],
