@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
             ),
             TextFormField(
               decoration: const InputDecoration(
-
+                  hintText: 'LOGIN',
               ),
             ),
 
