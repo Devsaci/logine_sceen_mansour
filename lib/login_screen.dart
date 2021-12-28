@@ -70,6 +70,7 @@ class LoginScreen extends StatelessWidget {
               height: 30,
             ),
             Container(
+              width: double.infinity,
               color: Colors.red,
               child: MaterialButton(
                 child: Text('Login'),
