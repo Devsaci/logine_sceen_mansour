@@ -4,6 +4,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
@@ -19,9 +20,9 @@ class LoginScreen extends StatelessWidget {
       ),
       body: Center(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Login',
@@ -87,7 +88,13 @@ class LoginScreen extends StatelessWidget {
                     print(passwordController.text);
                   },
                 ),
-              )
+              ),
+              Row(
+                children: const [
+                  Text("Don\'t have an account", style: TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.bold),),
+                ],
+              ),
             ],
           ),
         ),
