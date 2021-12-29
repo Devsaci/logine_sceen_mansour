@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'dart:ui';
 
@@ -89,10 +89,19 @@ class LoginScreen extends StatelessWidget {
                   },
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
               Row(
-                children: const [
-                  Text("Don\'t have an account", style: TextStyle(
-                      fontSize: 15, fontWeight: FontWeight.bold),),
+                children: [
+                  Text(
+                    "Don\'t have an account",
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text("Register Now"),
+                  )
                 ],
               ),
             ],
