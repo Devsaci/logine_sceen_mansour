@@ -17,73 +17,79 @@ class LoginScreen extends StatelessWidget {
         title: Text('LOGIN SCREEN'),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Login',
-              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            TextFormField(
-              controller: emailController,
-              keyboardType: TextInputType.emailAddress,
-              onFieldSubmitted: (String value) {
-                print(value);
-              },
-              onChanged: (value) {
-                print(value);
-              },
-              decoration: InputDecoration(
-                // hintText: 'LOGIN',
-                labelText: 'Email Adress ',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                ),
-                prefixIcon: Icon(Icons.email),
+      body: Center(
+        child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Login',
+                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
               ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            TextFormField(
-              controller: passwordController,
-              keyboardType: TextInputType.visiblePassword,
-              obscureText: true,
-              onFieldSubmitted: (String value) {
-                print(value);
-              },
-              onChanged: (value) {
-                print(value);
-              },
-              decoration: const InputDecoration(
-                // hintText: 'LOGIN',
-                labelText: 'PassWord ',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                ),
-                prefixIcon: Icon(Icons.lock),
-                suffixIcon: Icon(Icons.remove_red_eye),
+              SizedBox(
+                height: 20,
               ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-              width: double.infinity,
-              color: Colors.red,
-              child: MaterialButton(
-                child: Text('Login', style: TextStyle(color: Colors.white),),
-                onPressed: () {
-
+              TextFormField(
+                controller: emailController,
+                keyboardType: TextInputType.emailAddress,
+                onFieldSubmitted: (String value) {
+                  // print(value);
                 },
+                onChanged: (value) {
+                  // print(value);
+                },
+                decoration: InputDecoration(
+                  // hintText: 'LOGIN',
+                  labelText: 'Email Adress ',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                  ),
+                  prefixIcon: Icon(Icons.email),
+                ),
               ),
-            )
-          ],
+              SizedBox(
+                height: 20,
+              ),
+              TextFormField(
+                controller: passwordController,
+                keyboardType: TextInputType.visiblePassword,
+                obscureText: true,
+                onFieldSubmitted: (String value) {
+                  // print(value);
+                },
+                onChanged: (value) {
+                  // print(value);
+                },
+                decoration: const InputDecoration(
+                  // hintText: 'LOGIN',
+                  labelText: 'PassWord ',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                  ),
+                  prefixIcon: Icon(Icons.lock),
+                  suffixIcon: Icon(Icons.remove_red_eye),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: double.infinity,
+                color: Colors.red,
+                child: MaterialButton(
+                  child: Text(
+                    'Login',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onPressed: () {
+                    print(emailController.text);
+                    print(passwordController.text);
+                  },
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
