@@ -6,6 +6,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:logine_sceen/shared/components.dart';
+
+
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
@@ -76,7 +79,7 @@ class LoginScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-
+              defaultButton(),
               SizedBox(
                 height: 20,
               ),

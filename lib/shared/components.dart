@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 Widget defaultButton({
   double width = double.infinity,
-  Color background = Colors.red,
+  Color background = Colors.amber,
 }) =>
     Container(
       width: width,
