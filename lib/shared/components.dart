@@ -2,9 +2,13 @@
 
 import 'package:flutter/material.dart';
 
-Widget? defaultButton() => Container(
-      width: double.infinity,
-      color: Colors.red,
+Widget defaultButton({
+  double width = double.infinity,
+  Color background = Colors.red,
+}) =>
+    Container(
+      width: width,
+      color: background,
       child: MaterialButton(
         child: Text(
           'Login',
