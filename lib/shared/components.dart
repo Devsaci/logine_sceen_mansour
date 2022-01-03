@@ -3,20 +3,20 @@
 import 'package:flutter/material.dart';
 
 Widget defaultButton({
-  double width = double.infinity,
-  Color background = Colors.amber,
+  required double width,
+  required Color background ,
+  required Function() function,
+  required String text,
+
 }) =>
     Container(
       width: width,
       color: background,
       child: MaterialButton(
         child: Text(
-          'Login',
+          text.toUpperCase(),
           style: TextStyle(color: Colors.white),
         ),
-        onPressed: () {
-          // print(emailController.text);
-          // print(passwordController.text);
-        },
+        onPressed: function,
       ),
     );

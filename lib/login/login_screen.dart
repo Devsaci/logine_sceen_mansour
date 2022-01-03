@@ -8,8 +8,6 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:logine_sceen/shared/components.dart';
 
-
-
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
   var passwordController = TextEditingController();
@@ -79,7 +77,15 @@ class LoginScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              defaultButton(),
+              defaultButton(
+                text: 'LOGIN',
+                background: Colors.redAccent,
+                function: () {
+                  print(emailController.text);
+                  print(passwordController.text);
+                },
+                width: double.infinity,
+              ),
               SizedBox(
                 height: 20,
               ),
