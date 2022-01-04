@@ -29,10 +29,25 @@ Widget defaultButton({
     );
 
 Widget defaultFormField({
+  required FormFieldValidator<String>? validate,
   required TextEditingController controller,
   required TextInputType type,
+  required String label,
+  required IconData prefix,
+  ValueChanged<String>? onSubmit,
+  ValueChanged<String>? onChange,
 }) =>
     TextFormField(
+      validator: validate,
       controller: controller,
       keyboardType: type,
+      decoration: InputDecoration(
+        labelText: label,
+        prefixIcon: Icon(prefix),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(4.0)),
+        ),
+      ),
+      onFieldSubmitted: onSubmit,
+      onChanged: onChange,
     );

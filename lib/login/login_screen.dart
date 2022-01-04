@@ -45,11 +45,11 @@ class LoginScreen extends StatelessWidget {
                     }
                     return null;
                   },
-                  onFieldSubmitted: (String value) {
-                    // print(value);
+                  onFieldSubmitted: (value) {
+                    print(value);
                   },
                   onChanged: (value) {
-                    // print(value);
+                    print(value);
                   },
                   decoration: InputDecoration(
                     // hintText: 'LOGIN',
