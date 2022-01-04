@@ -37,6 +37,9 @@ class LoginScreen extends StatelessWidget {
                 TextFormField(
                   controller: emailController,
                   keyboardType: TextInputType.emailAddress,
+                  validator: (value){
+
+                  },
                   onFieldSubmitted: (String value) {
                     // print(value);
                   },
