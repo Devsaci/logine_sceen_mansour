@@ -12,6 +12,7 @@ class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
   var passwordController = TextEditingController();
   var emailController = TextEditingController();
+  var formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +25,7 @@ class LoginScreen extends StatelessWidget {
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
           child: Form(
+            key: formKey,
             child: Column(
               // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -38,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                   controller: emailController,
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) {
-                    if (value!.isEmpty){
+                    if (value!.isEmpty) {
                       return 'Email address must not be empty';
                     }
                     return null;
@@ -65,6 +67,12 @@ class LoginScreen extends StatelessWidget {
                   controller: passwordController,
                   keyboardType: TextInputType.visiblePassword,
                   obscureText: true,
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Password must not be empty';
+                    }
+                    return null;
+                  },
                   onFieldSubmitted: (String value) {
                     // print(value);
                   },
@@ -89,8 +97,10 @@ class LoginScreen extends StatelessWidget {
                   radius: 15.0,
                   text: 'Login',
                   function: () {
-                    print(emailController.text);
-                    print(passwordController.text);
+                    if (formKey.currentState!.validate()) {
+                      print(emailController.text);
+                      print(passwordController.text);
+                    }
                   },
                 ),
                 SizedBox(
@@ -117,7 +127,7 @@ class LoginScreen extends StatelessWidget {
                     Text(
                       "Don\'t have an account",
                       style:
-                      TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     TextButton(
                       onPressed: () {},
