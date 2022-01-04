@@ -11,12 +11,15 @@ Widget defaultButton({
 }) =>
     Container(
       width: width,
-      color: background,
       child: MaterialButton(
         child: Text(
-          isUpperCase ? text.toUpperCase(): text,
+          isUpperCase ? text.toUpperCase() : text,
           style: TextStyle(color: Colors.white),
         ),
         onPressed: function,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+        color: background,
       ),
     );
