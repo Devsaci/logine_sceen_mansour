@@ -28,4 +28,10 @@ Widget defaultButton({
       ),
     );
 
-Widget defaultFormField() => TextFormField();
+Widget defaultFormField({
+  required TextEditingController controller,
+}) =>
+    TextFormField(
+      controller: controller,
+
+    );
