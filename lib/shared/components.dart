@@ -11,6 +11,7 @@ Widget defaultButton({
   required String text,
 }) =>
     Container(
+      height: 40,
       width: width,
       child: MaterialButton(
         child: Text(
