@@ -78,6 +78,7 @@ class LoginScreen extends StatelessWidget {
                 height: 20,
               ),
               defaultButton(
+
                 text: 'LOGIN',
                 function: () {
                   print(emailController.text);
@@ -89,7 +90,8 @@ class LoginScreen extends StatelessWidget {
               ),
               defaultButton(
                 background: Colors.amber,
-                text: 'registration',
+                text: 'RegisTRation',
+                isUpperCase: false,
                 function: () {
                   print(emailController.text);
                   print(passwordController.text);

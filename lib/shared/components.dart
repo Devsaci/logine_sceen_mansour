@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 Widget defaultButton({
   double width = double.infinity,
   Color background = Colors.blue,
+  bool isUpperCase = true,
   required Function() function,
   required String text,
 }) =>
@@ -13,7 +14,7 @@ Widget defaultButton({
       color: background,
       child: MaterialButton(
         child: Text(
-          text.toUpperCase(),
+          isUpperCase ? text.toUpperCase(): text,
           style: TextStyle(color: Colors.white),
         ),
         onPressed: function,
