@@ -23,101 +23,104 @@ class LoginScreen extends StatelessWidget {
       body: Center(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-          child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Login',
-                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextFormField(
-                controller: emailController,
-                keyboardType: TextInputType.emailAddress,
-                onFieldSubmitted: (String value) {
-                  // print(value);
-                },
-                onChanged: (value) {
-                  // print(value);
-                },
-                decoration: InputDecoration(
-                  // hintText: 'LOGIN',
-                  labelText: 'Email Adress ',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                  ),
-                  prefixIcon: Icon(Icons.email),
+          child: Form(
+            child: Column(
+              // crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Login',
+                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextFormField(
-                controller: passwordController,
-                keyboardType: TextInputType.visiblePassword,
-                obscureText: true,
-                onFieldSubmitted: (String value) {
-                  // print(value);
-                },
-                onChanged: (value) {
-                  // print(value);
-                },
-                decoration: const InputDecoration(
-                  // hintText: 'LOGIN',
-                  labelText: 'PassWord ',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                  ),
-                  prefixIcon: Icon(Icons.lock),
-                  suffixIcon: Icon(Icons.remove_red_eye),
+                SizedBox(
+                  height: 20,
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              defaultButton(
-                height: 60,
-                radius: 15.0,
-                text: 'LOGIN',
-                function: () {
-                  print(emailController.text);
-                  print(passwordController.text);
-                },
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              defaultButton(
-                height: 50,
-                width: 200,
-                radius: 50,
-                background: Colors.amber,
-                text: 'RegisTRation',
-                isUpperCase: false,
-                function: () {
-                  print(emailController.text);
-                  print(passwordController.text);
-                },
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Don\'t have an account",
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                TextFormField(
+                  controller: emailController,
+                  keyboardType: TextInputType.emailAddress,
+                  onFieldSubmitted: (String value) {
+                    // print(value);
+                  },
+                  onChanged: (value) {
+                    // print(value);
+                  },
+                  decoration: InputDecoration(
+                    // hintText: 'LOGIN',
+                    labelText: 'Email Adress ',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                    ),
+                    prefixIcon: Icon(Icons.email),
                   ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text("Register Now"),
-                  )
-                ],
-              ),
-            ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  controller: passwordController,
+                  keyboardType: TextInputType.visiblePassword,
+                  obscureText: true,
+                  onFieldSubmitted: (String value) {
+                    // print(value);
+                  },
+                  onChanged: (value) {
+                    // print(value);
+                  },
+                  decoration: const InputDecoration(
+                    // hintText: 'LOGIN',
+                    labelText: 'PassWord ',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                    ),
+                    prefixIcon: Icon(Icons.lock),
+                    suffixIcon: Icon(Icons.remove_red_eye),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                defaultButton(
+                  height: 60,
+                  radius: 15.0,
+                  text: 'Login',
+                  function: () {
+                    print(emailController.text);
+                    print(passwordController.text);
+                  },
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                defaultButton(
+                  height: 50,
+                  width: 200,
+                  radius: 50,
+                  background: Colors.amber,
+                  text: 'RegisTRation',
+                  isUpperCase: false,
+                  function: () {
+                    print(emailController.text);
+                    print(passwordController.text);
+                  },
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Don\'t have an account",
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("Register Now"),
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
