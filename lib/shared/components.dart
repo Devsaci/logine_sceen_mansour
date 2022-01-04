@@ -30,8 +30,9 @@ Widget defaultButton({
 
 Widget defaultFormField({
   required TextEditingController controller,
+  required TextInputType type,
 }) =>
     TextFormField(
       controller: controller,
-
+      keyboardType: type,
     );
