@@ -78,6 +78,7 @@ class LoginScreen extends StatelessWidget {
                 height: 20,
               ),
               defaultButton(
+                height: 60,
                 radius: 15.0,
                 text: 'LOGIN',
                 function: () {
@@ -89,6 +90,7 @@ class LoginScreen extends StatelessWidget {
                 height: 20,
               ),
               defaultButton(
+                height: 50,
                 width: 200,
                 radius: 50,
                 background: Colors.amber,
