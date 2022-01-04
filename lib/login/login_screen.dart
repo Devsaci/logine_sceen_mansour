@@ -37,8 +37,11 @@ class LoginScreen extends StatelessWidget {
                 TextFormField(
                   controller: emailController,
                   keyboardType: TextInputType.emailAddress,
-                  validator: (value){
-
+                  validator: (value) {
+                    if (value!.isEmpty){
+                      return 'Email address must not be empty';
+                    }
+                    return null;
                   },
                   onFieldSubmitted: (String value) {
                     // print(value);
@@ -114,7 +117,7 @@ class LoginScreen extends StatelessWidget {
                     Text(
                       "Don\'t have an account",
                       style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     TextButton(
                       onPressed: () {},
