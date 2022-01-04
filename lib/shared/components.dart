@@ -6,6 +6,7 @@ Widget defaultButton({
   double width = double.infinity,
   Color background = Colors.blue,
   bool isUpperCase = true,
+  double radius = 0.0,
   required Function() function,
   required String text,
 }) =>
@@ -19,7 +20,7 @@ Widget defaultButton({
         onPressed: function,
       ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: BorderRadius.circular(radius),
         color: background,
       ),
     );

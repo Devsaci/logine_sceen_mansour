@@ -78,7 +78,7 @@ class LoginScreen extends StatelessWidget {
                 height: 20,
               ),
               defaultButton(
-
+                radius: 15.0,
                 text: 'LOGIN',
                 function: () {
                   print(emailController.text);
@@ -89,6 +89,8 @@ class LoginScreen extends StatelessWidget {
                 height: 20,
               ),
               defaultButton(
+                width: 200,
+                radius: 50,
                 background: Colors.amber,
                 text: 'RegisTRation',
                 isUpperCase: false,
