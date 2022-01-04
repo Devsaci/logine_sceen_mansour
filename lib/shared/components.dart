@@ -3,11 +3,10 @@
 import 'package:flutter/material.dart';
 
 Widget defaultButton({
-  required double width,
-  required Color background ,
+  double width = double.infinity,
+  Color background = Colors.blue,
   required Function() function,
   required String text,
-
 }) =>
     Container(
       width: width,

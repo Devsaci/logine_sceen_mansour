@@ -79,24 +79,21 @@ class LoginScreen extends StatelessWidget {
               ),
               defaultButton(
                 text: 'LOGIN',
-                background: Colors.redAccent,
                 function: () {
                   print(emailController.text);
                   print(passwordController.text);
                 },
-                width: double.infinity,
               ),
               SizedBox(
                 height: 20,
               ),
               defaultButton(
+                background: Colors.amber,
                 text: 'registration',
-                background: Colors.greenAccent,
                 function: () {
                   print(emailController.text);
                   print(passwordController.text);
                 },
-                width: double.infinity,
               ),
               SizedBox(
                 height: 20,
