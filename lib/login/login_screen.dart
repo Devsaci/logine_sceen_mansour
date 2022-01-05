@@ -36,29 +36,47 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                TextFormField(
-                  controller: emailController,
-                  keyboardType: TextInputType.emailAddress,
-                  validator: (value) {
+                // TextFormField(
+                //   controller: emailController,
+                //   keyboardType: TextInputType.emailAddress,
+                //   validator: (value) {
+                //     if (value!.isEmpty) {
+                //       return 'Email address must not be empty';
+                //     }
+                //     return null;
+                //   },
+                //   onFieldSubmitted: (value) {
+                //     print(value);
+                //   },
+                //   onChanged: (value) {
+                //     print(value);
+                //   },
+                //   decoration: InputDecoration(
+                //     // hintText: 'LOGIN',
+                //     labelText: 'Email Adress ',
+                //     border: OutlineInputBorder(
+                //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                //     ),
+                //     prefixIcon: Icon(Icons.email),
+                //   ),
+                // ),
+                defaultFormField(
+                  validate: (value) {
                     if (value!.isEmpty) {
-                      return 'Email address must not be empty';
+                      return 'email must not be empty';
                     }
                     return null;
                   },
-                  onFieldSubmitted: (value) {
+                  controller: emailController,
+                  type: TextInputType.emailAddress,
+                  label: 'Email',
+                  prefix: Icons.email,
+                  onSubmit: (value) {
                     print(value);
                   },
-                  onChanged: (value) {
+                  onChange: (value) {
                     print(value);
                   },
-                  decoration: InputDecoration(
-                    // hintText: 'LOGIN',
-                    labelText: 'Email Adress ',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                    ),
-                    prefixIcon: Icon(Icons.email),
-                  ),
                 ),
                 SizedBox(
                   height: 20,
