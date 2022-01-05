@@ -36,30 +36,6 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                // TextFormField(
-                //   controller: emailController,
-                //   keyboardType: TextInputType.emailAddress,
-                //   validator: (value) {
-                //     if (value!.isEmpty) {
-                //       return 'Email address must not be empty';
-                //     }
-                //     return null;
-                //   },
-                //   onFieldSubmitted: (value) {
-                //     print(value);
-                //   },
-                //   onChanged: (value) {
-                //     print(value);
-                //   },
-                //   decoration: InputDecoration(
-                //     // hintText: 'LOGIN',
-                //     labelText: 'Email Adress ',
-                //     border: OutlineInputBorder(
-                //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                //     ),
-                //     prefixIcon: Icon(Icons.email),
-                //   ),
-                // ),
                 defaultFormField(
                   validate: (value) {
                     if (value!.isEmpty) {
