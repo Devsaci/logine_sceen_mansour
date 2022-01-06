@@ -66,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                     }
                     return null;
                   },
-                  label: 'Email',
+                  label: 'Password',
                   prefix: Icons.email,
                   onSubmit: (value) {
                     print(value);
