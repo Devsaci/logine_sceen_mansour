@@ -13,6 +13,7 @@ class LoginScreen extends StatelessWidget {
   var formKey = GlobalKey<FormState>();
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
+  bool suffixPressed = true;
 
   @override
   Widget build(BuildContext context) {
