@@ -73,7 +73,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   //76. Obscure Text _____ SetSate _____
                   isPassword: isPassword,
                   suffixPressed: () {
-                    setState(() {});
+                    setState(() {
+                      isPassword = !isPassword;
+                    });
                   },
                   validate: (value) {
                     if (value!.isEmpty) {
