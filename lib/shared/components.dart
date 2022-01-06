@@ -36,7 +36,7 @@ Widget defaultFormField({
   required String label,
   required IconData prefix,
   IconData? suffix,
-  void Function()? suffixPressed,
+  VoidCallback? suffixPressed,
   ValueChanged<String>? onSubmit,
   ValueChanged<String>? onChange,
 }) =>
