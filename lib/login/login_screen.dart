@@ -62,7 +62,7 @@ class LoginScreen extends StatelessWidget {
                   type: TextInputType.visiblePassword,
                   validate: (value) {
                     if (value!.isEmpty) {
-                      return 'email must not be empty';
+                      return 'Password is too short';
                     }
                     return null;
                   },
