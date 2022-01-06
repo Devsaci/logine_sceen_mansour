@@ -40,6 +40,7 @@ Widget defaultFormField({
     TextFormField(
       controller: controller,
       keyboardType: type,
+      obscureText: true,
       validator: validate,
       decoration: InputDecoration(
         labelText: label,
