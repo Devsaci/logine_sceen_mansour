@@ -60,6 +60,7 @@ class LoginScreen extends StatelessWidget {
                 defaultFormField(
                   controller: passwordController,
                   type: TextInputType.visiblePassword,
+                  isPassword: true,
                   validate: (value) {
                     if (value!.isEmpty) {
                       return 'Password is too short';
@@ -68,7 +69,7 @@ class LoginScreen extends StatelessWidget {
                   },
                   label: 'Password',
                   prefix: Icons.lock,
-                  suffix: true,
+                  suffix: Icons.remove_red_eye,
                   onSubmit: (value) {
                     print(value);
                   },
