@@ -41,7 +41,7 @@ Widget defaultFormField({
     TextFormField(
       controller: controller,
       keyboardType: type,
-      obscureText: true,
+      obscureText: isPassword,
       validator: validate,
       decoration: InputDecoration(
         labelText: label,
