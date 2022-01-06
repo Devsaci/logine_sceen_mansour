@@ -77,32 +77,6 @@ class LoginScreen extends StatelessWidget {
                     print(value);
                   },
                 ),
-                // TextFormField(
-                //   controller: passwordController,
-                //   keyboardType: TextInputType.visiblePassword,
-                //   obscureText: true,
-                //   validator: (value) {
-                //     if (value!.isEmpty) {
-                //       return 'Password must not be empty';
-                //     }
-                //     return null;
-                //   },
-                //   onFieldSubmitted: (String value) {
-                //     // print(value);
-                //   },
-                //   onChanged: (value) {
-                //     // print(value);
-                //   },
-                //   decoration: const InputDecoration(
-                //     // hintText: 'LOGIN',
-                //     labelText: 'PassWord ',
-                //     border: OutlineInputBorder(
-                //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                //     ),
-                //     prefixIcon: Icon(Icons.lock),
-                //     suffixIcon: Icon(Icons.remove_red_eye),
-                //   ),
-                // ),
                 SizedBox(
                   height: 20,
                 ),
