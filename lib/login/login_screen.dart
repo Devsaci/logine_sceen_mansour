@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   label: 'Password',
                   prefix: Icons.lock,
-                  suffix: Icons.visibility,
+                  suffix: isPassword ? Icons.visibility_off : Icons.visibility,
                   onSubmit: (value) {
                     print(value);
                   },
