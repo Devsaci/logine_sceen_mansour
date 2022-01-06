@@ -68,6 +68,7 @@ class LoginScreen extends StatelessWidget {
                   },
                   label: 'Password',
                   prefix: Icons.lock,
+                  suffix: true,
                   onSubmit: (value) {
                     print(value);
                   },
@@ -101,10 +102,6 @@ class LoginScreen extends StatelessWidget {
                 //     suffixIcon: Icon(Icons.remove_red_eye),
                 //   ),
                 // ),
-                defaultFormField(
-                  controller: passwordController,
-
-                ),
                 SizedBox(
                   height: 20,
                 ),
