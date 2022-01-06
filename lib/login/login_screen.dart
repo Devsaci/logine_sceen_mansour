@@ -60,7 +60,8 @@ class LoginScreen extends StatelessWidget {
                 defaultFormField(
                   controller: passwordController,
                   type: TextInputType.visiblePassword,
-                  isPassword: true,
+                  //76. Obscure Text
+                  isPassword: false,
                   validate: (value) {
                     if (value!.isEmpty) {
                       return 'Password is too short';
