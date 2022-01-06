@@ -10,9 +10,9 @@ import 'package:logine_sceen/shared/components.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
-  var passwordController = TextEditingController();
-  var emailController = TextEditingController();
   var formKey = GlobalKey<FormState>();
+  var emailController = TextEditingController();
+  var passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +37,14 @@ class LoginScreen extends StatelessWidget {
                   height: 20,
                 ),
                 defaultFormField(
+                  controller: emailController,
+                  type: TextInputType.emailAddress,
                   validate: (value) {
                     if (value!.isEmpty) {
                       return 'email must not be empty';
                     }
                     return null;
                   },
-                  controller: emailController,
-                  type: TextInputType.emailAddress,
                   label: 'Email',
                   prefix: Icons.email,
                   onSubmit: (value) {

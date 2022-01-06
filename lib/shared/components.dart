@@ -29,18 +29,18 @@ Widget defaultButton({
     );
 
 Widget defaultFormField({
-  required FormFieldValidator<String>? validate,
   required TextEditingController controller,
   required TextInputType type,
+  required FormFieldValidator<String>? validate,
   required String label,
   required IconData prefix,
   ValueChanged<String>? onSubmit,
   ValueChanged<String>? onChange,
 }) =>
     TextFormField(
-      validator: validate,
       controller: controller,
       keyboardType: type,
+      validator: validate,
       decoration: InputDecoration(
         labelText: label,
         prefixIcon: Icon(prefix),
