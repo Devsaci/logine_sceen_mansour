@@ -57,31 +57,53 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                TextFormField(
+                defaultFormField(
                   controller: passwordController,
-                  keyboardType: TextInputType.visiblePassword,
-                  obscureText: true,
-                  validator: (value) {
+                  type: TextInputType.emailAddress,
+                  validate: (value) {
                     if (value!.isEmpty) {
-                      return 'Password must not be empty';
+                      return 'email must not be empty';
                     }
                     return null;
                   },
-                  onFieldSubmitted: (String value) {
-                    // print(value);
+                  label: 'Email',
+                  prefix: Icons.email,
+                  onSubmit: (value) {
+                    print(value);
                   },
-                  onChanged: (value) {
-                    // print(value);
+                  onChange: (value) {
+                    print(value);
                   },
-                  decoration: const InputDecoration(
-                    // hintText: 'LOGIN',
-                    labelText: 'PassWord ',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                    ),
-                    prefixIcon: Icon(Icons.lock),
-                    suffixIcon: Icon(Icons.remove_red_eye),
-                  ),
+                ),
+                // TextFormField(
+                //   controller: passwordController,
+                //   keyboardType: TextInputType.visiblePassword,
+                //   obscureText: true,
+                //   validator: (value) {
+                //     if (value!.isEmpty) {
+                //       return 'Password must not be empty';
+                //     }
+                //     return null;
+                //   },
+                //   onFieldSubmitted: (String value) {
+                //     // print(value);
+                //   },
+                //   onChanged: (value) {
+                //     // print(value);
+                //   },
+                //   decoration: const InputDecoration(
+                //     // hintText: 'LOGIN',
+                //     labelText: 'PassWord ',
+                //     border: OutlineInputBorder(
+                //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                //     ),
+                //     prefixIcon: Icon(Icons.lock),
+                //     suffixIcon: Icon(Icons.remove_red_eye),
+                //   ),
+                // ),
+                defaultFormField(
+                  controller: passwordController,
+
                 ),
                 SizedBox(
                   height: 20,
