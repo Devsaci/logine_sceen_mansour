@@ -62,6 +62,9 @@ class LoginScreen extends StatelessWidget {
                   type: TextInputType.visiblePassword,
                   //76. Obscure Text _____ SetSate _____
                   isPassword: false,
+                  suffixPressed: () {
+
+                  },
                   validate: (value) {
                     if (value!.isEmpty) {
                       return 'Password is too short';
