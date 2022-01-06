@@ -35,6 +35,7 @@ Widget defaultFormField({
   required FormFieldValidator<String>? validate,
   required String label,
   required IconData prefix,
+  IconData? suffix ,
   ValueChanged<String>? onSubmit,
   ValueChanged<String>? onChange,
 }) =>
