@@ -36,6 +36,7 @@ Widget defaultFormField({
   required String label,
   required IconData prefix,
   IconData? suffix,
+  Function? suffixPressed,
   ValueChanged<String>? onSubmit,
   ValueChanged<String>? onChange,
 }) =>
@@ -48,7 +49,9 @@ Widget defaultFormField({
         labelText: label,
         prefixIcon: Icon(prefix),
         suffixIcon: suffix != null ? IconButton(
-            onPressed: (){},
+            onPressed: (){
+
+            },
             icon :Icon(suffix),
         )
             : null,
