@@ -46,6 +46,7 @@ Widget defaultFormField({
       decoration: InputDecoration(
         labelText: label,
         prefixIcon: Icon(prefix),
+        suffixIcon: Icon(Icons.remove_red_eye),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(4.0)),
         ),
