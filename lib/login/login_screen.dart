@@ -8,11 +8,20 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:logine_sceen/shared/components.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   var formKey = GlobalKey<FormState>();
+
   var emailController = TextEditingController();
+
   var passwordController = TextEditingController();
+
   bool isPassword = true;
 
   @override
