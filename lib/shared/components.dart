@@ -31,6 +31,7 @@ Widget defaultButton({
 Widget defaultFormField({
   required TextEditingController controller,
   required TextInputType type,
+  bool isPassword = false,
   required FormFieldValidator<String>? validate,
   required String label,
   required IconData prefix,
