@@ -13,7 +13,7 @@ class LoginScreen extends StatelessWidget {
   var formKey = GlobalKey<FormState>();
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
-  bool suffixPressed = true;
+  bool isPassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ class LoginScreen extends StatelessWidget {
                   controller: passwordController,
                   type: TextInputType.visiblePassword,
                   //76. Obscure Text _____ SetSate _____
-                  isPassword: false,
+                  isPassword: isPassword,
                   suffixPressed: () {
 
                   },
