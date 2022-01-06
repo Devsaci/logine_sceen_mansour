@@ -35,7 +35,7 @@ Widget defaultFormField({
   required FormFieldValidator<String>? validate,
   required String label,
   required IconData prefix,
-  IconData? suffix ,
+  IconData? suffix,
   ValueChanged<String>? onSubmit,
   ValueChanged<String>? onChange,
 }) =>
@@ -47,7 +47,11 @@ Widget defaultFormField({
       decoration: InputDecoration(
         labelText: label,
         prefixIcon: Icon(prefix),
-        suffixIcon: suffix !=  null ? Icon(suffix) : null,
+        suffixIcon: suffix != null ? IconButton(
+            onPressed: (){},
+            icon :Icon(suffix),
+        )
+            : null,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(4.0)),
         ),

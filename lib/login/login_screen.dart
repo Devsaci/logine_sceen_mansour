@@ -60,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                 defaultFormField(
                   controller: passwordController,
                   type: TextInputType.visiblePassword,
-                  //76. Obscure Text
+                  //76. Obscure Text _____ SetSate _____
                   isPassword: false,
                   validate: (value) {
                     if (value!.isEmpty) {
